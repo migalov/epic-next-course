@@ -33,9 +33,9 @@ export default async function RootLayout({
   
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className + `flex flex-col`}>
         <Header data={globalData.header} />
-        <div>
+        <div className="flex-1">
           {children}
         </div>
         <Footer data={globalData.footer} />
