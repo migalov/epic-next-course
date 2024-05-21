@@ -29,7 +29,6 @@ export default async function RootLayout({
 }>) {
 
   const globalData = await getGlobalPageData();
-  console.log(globalData);
   
   return (
     <html lang="en">
