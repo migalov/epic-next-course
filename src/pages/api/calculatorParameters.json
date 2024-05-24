@@ -1,0 +1,193 @@
+{
+    "calculation": "Листовая печать",
+    "parameteres": [
+        {
+            "title": "Формат печати",
+            "name": "formatPrint",
+            "dependsOn": "",
+            "options": [
+                {
+                    "label": "500x700",
+                    "value": "500x700"
+                },
+                {
+                    "label": "5200x720",
+                    "value": "520x720"
+                },
+                {
+                    "label": "330x482",
+                    "value": "330x482"
+                }
+            ]
+        },
+        {
+            "title": "Очередность печати",
+            "name": "formatPrint",
+            "dependsOn": "colorful_print",
+            "options": [
+                {
+                    "label": "В подбор",
+                    "value": "В подбор"
+                },
+                {
+                    "label": "Не в подбор",
+                    "value": "Не в подбор"
+                }
+            ]
+        },
+        {
+            "title": "Материал",
+            "name": "material",
+            "dependsOn": "printingOrder",
+            "options": [
+                {
+                    "label": "Офсетная бумага",
+                    "value": "Офсетная бумага"
+                },
+                {
+                    "label": "Мелованная бумага",
+                    "value": "Мелованная бумага"
+                },
+                {
+                    "label": "Картон",
+                    "value": "Картон"
+                },
+                {
+                    "label": "Самоклейка",
+                    "value": "Самоклейка"
+                },
+                {
+                    "label": "Дизайнерская бумага",
+                    "value": "",
+                    "options": [
+                        {
+                            "label": "SL Graphica Natural Rough 150 gsm",
+                            "value": "SL Graphica Natural Rough 150 gsm"
+                        },
+                        {
+                            "label": "SL Graphica High White Rough 150 gsm",
+                            "value": "SL Graphica High White Rough 150 gsm"
+                        }
+                    ]
+                },
+                {
+                    "label": "Бумага заказчика",
+                    "value": "",
+                    "inputs": [
+                        {
+                            "label": "Бумага заказчика",
+                            "type": "text",
+                            "placeholder": "Вписать наименование"
+                        }
+                    ]
+                },
+                {
+                    "title": "Поверхность материала",
+                    "name": "materialSurface",
+                    "dependsOn": "",
+                    "options": [
+                        {
+                            "label": "Глянцевая",
+                            "value": "Глянцевая",
+                            "dependsOn": {
+                                "printingOrder": "Мелованная"
+                            }
+                        },
+                        {
+                            "label": "Матовая",
+                            "value": "Матовая",
+                            "dependsOn": {
+                                "printingOrder": "Мелованная"
+                            }
+                        },
+                        {
+                            "label": "Односторонний",
+                            "value": "Односторонний",
+                            "dependsOn": {
+                                "printingOrder": "Картон"
+                            }
+                        },
+                        {
+                            "label": "Двухсторонний",
+                            "value": "Двухсторонний",
+                            "dependsOn": {
+                                "printingOrder": "Картон"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "title": "Плотность бумаги",
+                    "name": "densityPaper",
+                    "dependsOn": "",
+                    "options": [
+                        {
+                            "label": "115",
+                            "value": "115",
+                            "dependsOn": {
+                                "material": "Мелованная"
+                            }
+                        },
+                        {
+                            "label": "130",
+                            "value": "130",
+                            "dependsOn": {
+                                "material": "Мелованная"
+                            }
+                        },
+                        {
+                            "label": "150",
+                            "value": "150",
+                            "dependsOn": {
+                                "material": "Мелованная"
+                            }
+                        },
+                        {
+                            "label": "170",
+                            "value": "170",
+                            "dependsOn": {
+                                "material": "Мелованная"
+                            }
+                        },
+                        {
+                            "label": "200",
+                            "value": "200",
+                            "dependsOn": {
+                                "material": "Мелованная"
+                            }
+                        },
+                        {
+                            "label": "250",
+                            "value": "250",
+                            "dependsOn": {
+                                "material": "Мелованная"
+                            }
+                        },
+                        {
+                            "label": "300",
+                            "value": "300",
+                            "dependsOn": {
+                                "material": "Мелованная"
+                            }
+                        },
+                        {
+                            "label": "270",
+                            "value": "270",
+                            "dependsOn": {
+                                "material": "Односторонний"
+                            }
+                        },
+                        {
+                            "label": "270",
+                            "value": "270",
+                            "dependsOn": {
+                                "material": "Односторонний"
+                            }
+                        }
+                    ]
+                }
+
+            ]
+        }
+    ]
+  }
