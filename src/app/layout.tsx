@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 import { getGlobalPageData, getGlobalPageMetaData } from "@/data/loaders";
 import { Header } from "@/components/custom/Header";
 import { Footer } from "@/components/custom/Footer";
@@ -33,6 +34,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className + `flex flex-col`}>
+        <Toaster position="bottom-center" />
         <Header data={globalData.header} />
         <div className="flex-1">
           {children}

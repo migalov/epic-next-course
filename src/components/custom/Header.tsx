@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { loginUserAction } from "@/data/actions/auth-actions";
 import { getUserMeLoader } from "@/data/services/get-user-me-loader";
 import { LogoutButton } from "./LogoutButton";
+import { SummaryForm } from "@/components/forms/SummaryForm";
 
 interface HeaderProps {
   data: {
@@ -50,6 +51,7 @@ export async function Header({ data }: Readonly<HeaderProps>) {
     <div className="flex items-center justify-between px-4 py-3 bg-white shadow-md dark:bg-gray-800">
       
       <Logo text={logoText.text}/>
+      {user.ok && <SummaryForm />}
       <div className="flex items-center gap-4">
         {
           user.ok ?
